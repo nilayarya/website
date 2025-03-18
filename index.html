@@ -31,13 +31,22 @@
             right: 0;
             width: 100%;  /* Adjust as needed to cover the text */
             height: 44px;  /* Adjust as needed to cover the text */
-            background-color: black;
+            background-color: #201c1c;
             z-index: 9999;  /* Make sure it's above the iframe */
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="cover-notion-branding"></div>
     <iframe src="https://actually-ship-247.notion.site/ebd/1ba9b074f30d8073bce2c38a35c6c9df" frameborder="0" allowfullscreen></iframe>
+    <script>
+        setTimeout(() => {
+            const brandingCover = document.querySelector('.cover-notion-branding');
+            if (brandingCover) {
+                brandingCover.style.display = "block"; // Show after 2 seconds
+            }
+        }, 2000);
+    </script>
 </body>
 </html>
